@@ -19,7 +19,10 @@ from eduOpinion import views as eduOpinion_views
 
 
 urlpatterns = [
-    url(r'^index/$', eduOpinion_views.index, name='index'),  # new
-    url(r'^home/$', eduOpinion_views.home, name='home'),  # new
+    url(r'^$', eduOpinion_views.home, name='home'),
+    url(r'^createUser/$', eduOpinion_views.createUser, name="createUser"),
+    url(r'^login/$', eduOpinion_views.login, name="login"),
+    url(r'^logOut/$', eduOpinion_views.logOut, name="logOut"),
+    url(r'^index/$', eduOpinion_views.index, name='index'),
     url(r'^admin/', admin.site.urls),
 ]
